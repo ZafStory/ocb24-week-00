@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+      html,body {
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-image: url(https://images.unsplash.com/photo-1682687981603-ae874bf432f2?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+      }
+
+      .input-section{
+      display: flex;
+      flex-direction:column;
+      width: 300px;
+      }
+
+      form {
+      border: 5px solid #f1f1f1;
+      }
+
+      input[type=username], input[type=password] {
+      width: 100%;
+      padding: 16px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      }
+
+      button {
+      background-color: #8ebf42;
+      color: white;
+      padding: 12px 0;
+      margin: 10px 0;
+      border: none;
+      cursor: grabbing;
+      width: 100%;
+      }
+      
+      hr {
+      color: #a9a9a9;
+      opacity: 0.3;
+      }
+
+      .account-type {
+      margin: 15px 0;
+      }
+
+      label.radio {
+      position: relative;
+      display: inline-block;
+      padding-top: 4px;
+      margin-right: 20px;
+      text-indent: 30px;
+      overflow: visible;
+      cursor: pointer;
+      }
+      label.radio:before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #1c87c9;
+      }
+      label.radio:after {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 4px;
+      top: 8px;
+      left: 4px;
+      border: 3px solid #fff;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after {
+      opacity: 1;
+      }
+
+      h1 {
+      text-align:center;
+      font-size:18px;
+      }
+      button:hover {
+      opacity: 0.8;
+      }
+      .formcontainer {
+      text-align: left;
+      margin: 24px 50px 12px;
+      }
+      .container {
+      padding: 16px 0;
+      text-align:left;
+      }
+      span.psw {
+      float: right;
+      padding-top: 0;
+      padding-right: 15px;
+      }
+      @media screen and (max-width: 300px) {
+      span.psw {
+      display: block;
+      float: none;
+      }
+
+    </style>
+  </head>
+    <body>
+      <form action="" method="get" class="form-example">
+      <hr>
+      <div class="account-type">
+        <input type="radio" value="none" id="radioOne" name="account" checked/>
+        <label for="radioOne" class="radio">Personal</label>
+        <input type="radio" value="none" id="radioTwo" name="account" />
+        <label for="radioTwo" class="radio">Company</label>
+      </div>
+      <hr>
+
+      <h1>Login Form</h1>
+      <div class="formcontainer">
+      <hr>
+      <div class="container">
+        <label for="uname"><strong>Username</strong></label>
+        <input type="username" placeholder="Enter Username" name="uname" required>
+        <label for="psw"><strong>Password</strong></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+      </div>
+      <button type="submit">Login</button>
+      <div class="container" style="background-color: #73D2DE">
+        <label style="padding-left: 15px">
+        <input type="checkbox"  checked="checked" name="remember"> Remember me
+        </label>
+        <span class="psw"><a href="#"> Forgot password?</a></span>
+      </div>
+      
+      </form>
+    </body>
+</html>
